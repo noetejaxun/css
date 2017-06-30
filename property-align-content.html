@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* align-content
+        La propiedad CSS align-content ajusta las líneas dentro de un contenedor flex cuando
+        hay espacio extra en el eje transversal. */
+
+        /* SINTAXIS (eje transversal = eje vertical)
+        Ajusta las líneas desde el inicio del eje transversal
+        align-content: flex-start;
+
+        Ajusta las líneas desde el final del eje transversal
+        align-content: flex-end;
+
+        Ajusta las líneas al rededor del centro del eje transversal
+        align-content: center;
+
+        Distribuye las líneas a lo largo del eje transversal, de principio a fin
+        align-content: space-between;
+
+        Distribuye las líneas a lo largo del eje transversal, igualmente espaciados
+        align-content: space-around;
+
+        Estira las líneas para que ocupen el eje transversal completo
+        align-content: stretch;
+
+        Valores globales
+        align-content: inherit;
+        align-content: initial;
+        align-content: unset;*/
+
+        /* SINTAXIS FORMAL
+        flex-start | flex-end | center | space-between | space-around | stretch */
+
+        .container > div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(-45deg, #78ff8c, #b4ffc8);
+        }
+        .container > div > div {
+            margin: 2px;
+            width: 30px;
+            min-height: 30px;
+            background: linear-gradient(-45deg, #788cff, #b4c8ff);
+        }
+        .flex-start {
+            align-content: flex-start;
+        }
+        .center {
+            align-content: center;
+        }
+        .flex-end {
+            align-content: flex-end;
+        }
+        .space-between {
+            align-content: space-between;
+        }
+        .space-around {
+            align-content: space-around;
+        }
+        .tretch {
+            align-content: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>align-content: flex-start</p>
+        <div class="flex-start">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>align-content: center</p>
+        <div class="center">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>align-content: flex-end</p>
+        <div class="flex-end">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>align-content: space-between</p>
+        <div class="space-between">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>align-content: space-around</p>
+        <div class="space-around">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>align-content: stretch</p>
+        <div class="stretch">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
