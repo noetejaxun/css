@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+        /*La pseudo-clase :active de CSS  cubre el caso en el que un elemento está siendo activado
+        por el usuario.  Cuando se interactúa con el ratón, se corresponde al momento en el que el
+        usuario presiona el botón del ratón hasta el momento en el que lo suelta. A menudo es usado
+        en los elementos <a> y <button> de HTML*/
+
+        /*El order está definido por la regla mnemotécnica LVHA: :link — :visited — :hover — :active. */
+        a:link { /* enlaces no visitados */
+            color: #00A6A6;
+        }
+        a:visited { /* enlaces visitados */
+            color: #B2675E;
+        }
+        a:hover { /* el usuario pasa el cursor por encima */
+            font-weight: bold;
+            color: #68B0AB;
+        }
+        a:active { /* enlaces activos */
+            color: #C90A33;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo del selector CSS :active</h1>
+    <p>El enlace cambiará su color a rojo mientras se mantenga pulsado: <a href="#">Mozilla Developer Network</a></p>
+</body>
+</html>
