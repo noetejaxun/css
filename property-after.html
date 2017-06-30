@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /*El pseudo-elemento CSS ::after coincide con el último hijo virtual del elemento seleccionado.
+        Se usa generalmente para añadir contenido estético a un elemento, usando la propiedad CSS content.
+        Este elemento se muestra en línea con el texto de forma predeterminada.*/
+
+        /* Uso simple */
+        .exciting-text::after {
+            content: "<- Ahora esto *es* emocionante!";
+            color: #00AD3F;
+        }
+        .boring-text::after {
+            content: "<- ABURRIDO!";
+            color: #AA203C;
+        }
+
+        /* Ejemplo decorativo */
+        .ribbon {
+            background-color: #68EDDB;
+        }
+        .ribbon::after {
+            content: "Look at this orange box";
+            background-color: #FFBA10;
+            border-color: black;
+            border-width: 2px;
+            border-style: dotted;
+        }
+
+        /* Tooltips */
+        span[data-descr] {
+            position: relative;
+            color: #FF312E;
+            cursor: help;
+            text-decoration: none;
+        }
+        /* El pseudo-element ::after en conjunto con la expresión CSS attr() y el atributo data personalizado
+        data-descr para crear un tooltip de tipo glosario, completamente en CSS.*/
+        /* Incluyendo el estado :hover::after */
+        span[data-descr]:hover::after {
+            content: attr(data-descr);
+            color: #02182B;
+            font-size: 14px;
+            background-color: #FFFCF2;
+            border: 1px #CCC5B9 solid;
+            border-radius: 10px;
+            min-width: 200px;
+            padding: 10px;
+            position: absolute;
+            left: 0;
+            top: 20px;
+            z-index: 1;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Uso simple -->
+    <h2>Uso simple</h2>
+    <p class="boring-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quod.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, rerum.</p>
+    <p class="exciting-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, laborum!</p>
+    <hr>
+
+    <!-- Ejemplo decorativo -->
+    <h2>Decoraciones</h2>
+    <span class="ribbon">Lorem ipsum dolor sit amet.</span>
+    <hr>
+
+    <!-- Tooltips -->
+    <h2>Tooltips</h2>
+    <p>Lorem ipsum dolor sit amet,<br>Consectetur adipisicing elit. suscipit <span data-descr="Hola a todos">tempore</span> doloremque hic repellat
+        <span data-descr="Small popups which also hide again">facilis!</span> Perferendis fuga in, facere itaque?
+    </p>
+</body>
+</html>
