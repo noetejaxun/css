@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Align Items</title>
+    <style>
+        /*La propiedad CSS align-items alinea los elementos de la línea flexible actual de la misma forma
+        que justify-content, pero en dirección perpendicular.*/
+
+        /*  Alinea los elementos al borde de inicio
+            align-items: flex-start;
+
+        /*  Alinea los elementos al borde de fin
+            align-items: flex-end;
+
+        /*  Centra los elementos en el eje transversal
+            align-items: center;
+
+        /*  Alinea la base de los elementos
+            align-items: baseline;
+
+        /*  Estira los elementos para ajustarlos
+            align-items: stretch;
+
+        /*  Valores globales
+            align-items: inherit;
+            align-items: initial;
+            align-items: unset;
+
+            SINTAXIS FORMAL
+            flex-start | flex-end | center | baseline | stretch */
+
+            .container > div {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 140px;
+                height: 140px;
+                background: linear-gradient(-45deg, #78ff8c, #b4ffc8);
+            }
+            .container > div > div {
+                margin: 2px;
+                width: 30px;
+                min-height: 30px;
+                background: linear-gradient(-45deg, #788cff, #b4c8ff);
+            }
+            .flex-start {
+                align-items: : flex-start;
+            }
+            .center {
+                align-items: center;
+            }
+            .flex-end {
+                align-items: flex-end;
+            }
+            .baseline {
+                align-items: baseline;
+            }
+            .stretch {
+                align-items: stretch;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p>align-items: flex-start</p>
+            <div class="flex-start">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>align-items: center</p>
+            <div class="center">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>align-items: flex-end</p>
+            <div class="flex-end">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>align-items: baseline</p>
+            <div class="baseline">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>align-items: stretch</p>
+            <div class="stretch">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+    </html>
